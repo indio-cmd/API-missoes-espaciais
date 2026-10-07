@@ -1,0 +1,33 @@
+{
+  "name": "api-missoes-espaciais",
+  "version": "1.0.0",
+  "description": "api missoes espaciais",
+  "homepage": "https://github.com/indio-cmd/API-missoes-espaciais#readme",
+  "bugs": {
+    "url": "https://github.com/indio-cmd/API-missoes-espaciais/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indio-cmd/API-missoes-espaciais.git"
+  },
+  "license": "ISC",
+  "author": "kaua",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+    
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.5.2",
+    "supertest": "^7.3.1"
+  }
+}
