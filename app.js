@@ -76,11 +76,11 @@ const missao = [
  *                     type: string
  */
 app.get('/missao', (req, res) =>{
-    const titulo = req.query?.titulo || null
+    const nome = req.query?.nome || null
     let missaoFiltrados = null
-    if(titulo !== null){
-      missaoFiltrados = missao.filter(item => item.titulo.toLowerCase()
-                                                    .includes(titulo.toLowerCase()));
+    if(nome !== null){
+      missaoFiltrados = missao.filter(item => item.nome.toLowerCase()
+                                                    .includes(nome.toLowerCase()));
     }
 
     missaoFiltrados = missaoFiltrados ?? missao;
@@ -177,7 +177,7 @@ app.post('/missao', (req, res)=>{
             nome : nome,
             ano: ano,
             agencia : agencia,
-            status: req.body?.status
+            status: status
         }
 
         missao.push(novamissao);
@@ -226,7 +226,7 @@ app.put('/missao/:id', (req, res) => {
     }
 
     if(req?.body?.nome && req.body.nome !== ""){
-        missoes.nome = req.body.titulo;
+        missoes.nome = req.body.nome;
     }
 
     if(req?.body?.agencia && req.body.agencia !== ""){
@@ -272,7 +272,7 @@ app.delete('/missao/:id', (req, res) =>{
 
     missao.splice(indice, 1);
 
-    res.status(204).send({message: "Missão deletada com sucesso!"})
+    res.status(204).send()
 
 });
 
@@ -300,3 +300,4 @@ app.get("/anime", async (req, res) => {
 })
 
 export default app;
+
