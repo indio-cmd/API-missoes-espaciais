@@ -272,7 +272,7 @@ app.delete('/missao/:id', (req, res) =>{
 
     missao.splice(indice, 1);
 
-    res.status(204).send('')
+    res.status(204).send({message: "Missão deletada com sucesso!"})
 
 });
 
